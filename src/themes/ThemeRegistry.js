@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import { ColorModeContext } from "./ColorModeContext";
+import { getPalette } from "@/app/styles/themes";
 
 export default function ThemeRegistry({ children }) {
   const [mode, setMode] = useState("light");
@@ -28,7 +29,10 @@ export default function ThemeRegistry({ children }) {
     setMode((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  const theme = useMemo(() => createTheme({ palette: { mode } }), [mode]);
+  const theme = useMemo(
+    () => createTheme({ palette: getPalette(mode) }),
+    [mode]
+  );
 
   if (!hydrated) return null;
 

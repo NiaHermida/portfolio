@@ -9,8 +9,12 @@ const ThemeToggle = () => {
   if (!colorMode) return null;
 
   return (
-    <Button onClick={colorMode.toggleColorMode} color="contained">
-      {colorMode.mode === "dark" ? "Tema claro" : "Tema oscuro"}
+    <Button
+      onClick={colorMode.toggleColorMode}
+      variant="contained"
+      color="primary"
+    >
+      {colorMode.mode === "dark" ? "Sun" : "Moon"}
     </Button>
   );
 };
