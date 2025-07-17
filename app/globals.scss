@@ -1,3 +1,5 @@
+@import "../app/styles";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -38,5 +40,21 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.PortfolioContainer {
+  margin: 0 5%;
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .PortfolioContainer {
+    margin: 0 7%;
+  }
+}
+
+@media screen and (min-width: $breakpoint-xxl) {
+  .PortfolioContainer {
+    margin: 0 10%;
   }
 }

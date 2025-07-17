@@ -1,0 +1,18 @@
+@import "../../../app/styles";
+
+.PortfolioNavbar {
+  height: $navbar-height;
+  border: 1px solid;
+}
+
+.mode-dark {
+  .PortfolioNavbar {
+    border: 1px solid $dark-gray;
+  }
+}
+
+.mode-light {
+  .PortfolioNavbar {
+    border: 1px solid $light-gray;
+  }
+}
