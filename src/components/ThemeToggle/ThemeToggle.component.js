@@ -12,7 +12,6 @@ const ThemeToggle = () => {
     <Button
       onClick={colorMode.toggleColorMode}
       variant="contained"
-      color="primary"
     >
       {colorMode.mode === "dark" ? "Sun" : "Moon"}
     </Button>

@@ -2,17 +2,16 @@
 
 .PortfolioNavbar {
   height: $navbar-height;
-  border: 1px solid;
 }
 
 .mode-dark {
   .PortfolioNavbar {
-    border: 1px solid $dark-gray;
+    box-shadow: $box-shadow-dark-downwards;
   }
 }
 
 .mode-light {
   .PortfolioNavbar {
-    border: 1px solid $light-gray;
+    box-shadow: $box-shadow-light-downwards;
   }
 }

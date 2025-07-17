@@ -1,7 +1,7 @@
 @import "../../../app/styles";
 
 .PortfolioPresentation {
-  background-color: lightgreen;
+  // background-color: lightgreen;
   height: 40rem;
 }
 
@@ -9,4 +9,72 @@
   width: 15rem;
   height: 15rem;
   border-radius: 100%;
+}
+
+.PortfolioPresentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $layout-margin * 2 5%;
+}
+
+.PortfolioPresentation__Title,
+.PortfolioPresentation__Subtitle,
+.PortfolioPresentation__Description {
+  text-align: center;
+  margin-bottom: $layout-margin;
+}
+
+.PortfolioPresentation__Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.PortfolioPresentation__Subtitle {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.PortfolioPresentation__Description {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.PortfolioPresentation__Buttons {
+  svg {
+    margin-right: $layout-margin/2;
+  }
+}
+
+.mode-dark {
+  .PortfolioPresentation__Title__Name {
+    color: $primary;
+  }
+}
+
+.mode-light {
+  .PortfolioPresentation__Title__Name {
+    color: $secondary;
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .PortfolioPresentation__Title {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 2rem;
+    span {
+      padding-right: $layout-margin;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .PortfolioPresentation {
+    padding: $layout-margin * 2 15%;
+  }
 }
