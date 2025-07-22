@@ -1,6 +1,42 @@
 @import "../../../app/styles";
 
 .PortfolioAboutMe {
-  background-color: lightsalmon;
-  min-height: 40rem;
+  padding: $layout-margin * 2 5%;
+  align-items: center;
+}
+
+.PortfolioAboutMe__Title {
+  margin-bottom: $layout-margin;
+}
+
+.PortfolioAboutMe__Text {
+  text-align: justify;
+}
+
+.PortfolioAboutMe__Cards {
+  margin: $layout-margin 0;
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .PortfolioAboutMe__Cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $layout-margin;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+  .PortfolioAboutMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $layout-margin * 2;
+    .PortfolioAboutMe__Description,
+    .PortfolioAboutMe__Cards {
+      width: 50%;
+    }
+  }
 }

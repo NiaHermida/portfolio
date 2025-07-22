@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@mui/material";
 import DownloadIcon from "@icons/DownloadIcon";
+import EnvelopeIcon from "@icons/EnvelopeIcon";
 import "./Presentation.scss";
 
 const Presentation = () => {
@@ -36,6 +37,10 @@ const Presentation = () => {
         <Button variant="contained">
           <DownloadIcon />
           Descargar CV
+        </Button>
+        <Button variant="contained">
+          <EnvelopeIcon />
+          Estemos en contacto
         </Button>
       </div>
     </div>

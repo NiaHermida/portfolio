@@ -1,21 +1,18 @@
 @import "../../../app/styles";
 
 .PortfolioPresentation {
-  // background-color: lightgreen;
-  height: 40rem;
+  min-height: 40rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $layout-margin * 2 5%;
 }
 
 .PortfolioPresentation__Image {
   width: 15rem;
   height: 15rem;
   border-radius: 100%;
-}
-
-.PortfolioPresentation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: $layout-margin * 2 5%;
 }
 
 .PortfolioPresentation__Title,
@@ -44,6 +41,13 @@
 }
 
 .PortfolioPresentation__Buttons {
+  gap: $layout-margin;
+  display: flex;
+  flex-direction: column;
+  margin-top: $layout-margin;
+  button {
+    width: 241px;
+  }
   svg {
     margin-right: $layout-margin/2;
   }
@@ -62,19 +66,17 @@
 }
 
 @media screen and (min-width: $breakpoint-sm) {
-  .PortfolioPresentation__Title {
-    display: flex;
-    flex-direction: row;
-    font-weight: 700;
-    font-size: 2rem;
-    span {
-      padding-right: $layout-margin;
-    }
+  .PortfolioPresentation {
+    min-height: 53rem;
   }
 }
 
 @media screen and (min-width: $breakpoint-md) {
   .PortfolioPresentation {
     padding: $layout-margin * 2 15%;
+  }
+  .PortfolioPresentation__Buttons {
+    display: flex;
+    flex-direction: row;
   }
 }

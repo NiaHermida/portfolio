@@ -1,0 +1,67 @@
+@import "../../../app/styles";
+
+.PortfolioPromoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  border-radius: $border-radius;
+  margin: $layout-margin 0;
+  padding: $layout-margin;
+  .PortfolioIcon {
+    height: 34px;
+    width: 34px;
+  }
+}
+
+.PortfolioPromoCard__Title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.PortfolioPromoCard__Subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.mode-dark {
+  .PortfolioPromoCard {
+    border: $dark-gray 1px solid;
+  }
+  .PortfolioPromoCard__Subtitle {
+    color: $light-gray;
+  }
+  .PortfolioPromoCard__Icon {
+    svg {
+      color: $secondary;
+    }
+  }
+}
+
+.mode-light {
+  .PortfolioPromoCard {
+    border: $light-gray 1px solid;
+  }
+  .PortfolioPromoCard__Subtitle {
+    color: $dark-gray;
+  }
+  .PortfolioPromoCard__Icon {
+    svg {
+      color: $primary;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .PortfolioPromoCard {
+    width: 49%;
+    height: 160px;
+  }
+  .PortfolioPromoCard {
+    margin: 0;
+  }
+}
